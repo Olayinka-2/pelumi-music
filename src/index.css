@@ -1,16 +1,26 @@
 
 :root {
-  --bg: #1A120B;
-  --primary: #E0AA3E;
-  --secondary: #CA6702;
-  --hover: #BB3E03;
-  --text: #FAF3E0;
-  --muted: #C4B6A6;
+  --primary-bg: #0B3C5D;
+  --body-bg: linear-gradient(to right,#092f48,#0B2134 );
+  --accent-bg: #DDF3FE;
+  --text-dark: #0B2134;
+  --white: #FFFFFF;
+  --muted-cream: #6e6753;
+  --highlight: #FF3B30;
+  --muted-gray: #6B7C93;
 }
 
 .navbar-toggler {
-  color: var(--primary);
-  background-color: var(--secondary);
+  color: var(--primary-bg);
+  background-color: var(--accent-bg);
+}
+
+main {
+  background: var(--body-bg);
+}
+
+.img-height {
+  height: 100%;
 }
 
 
