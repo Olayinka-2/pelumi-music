@@ -41,7 +41,7 @@ img {
 /* About Section */
 
 section {
-  padding: 60px 0;
+  padding: 60px;
 }
 
 .about-btn:hover {
@@ -50,6 +50,23 @@ section {
   background: transparent;
   font-weight:  bold;
 }
+
+/* music section */
+.btn-text-dark:hover {
+  color: var(--text-dark);
+  background: transparent;
+  border: 1px solid var(--text-dark);
+}
+
+/* vedio section */
+
+
+.btn-muted-cream:hover {
+  border: 1px solid var(--white);
+  color: var(--white);
+  background: transparent;
+}
+
 
 
 /* body {

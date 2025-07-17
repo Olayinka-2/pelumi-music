@@ -1,17 +1,22 @@
-import Header from "./components/Header";
+import NavBar from "./components/NavBar";
 import HeroSection from "./components/HeroSection";
 import AboutMe from "./components/AboutMe";
+import Music from "./components/Music";
+import Video from "./components/Video";
+
 
 function App() {
 
   return (
     <>
     <header className="py-5">
-      <Header />
+      <NavBar />
       <HeroSection />
     </header>
     <main>
       <AboutMe />
+      <Music />
+      <Video />
     </main>
     </>
   )

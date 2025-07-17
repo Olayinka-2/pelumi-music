@@ -1,6 +1,6 @@
 import { useRef, useEffect } from "react";
 
-const Header:React.FC = () => {
+const NavBar:React.FC = () => {
 
   const navRef = useRef<HTMLElement>(null);
 
@@ -49,4 +49,4 @@ const Header:React.FC = () => {
   )
 }
 
-export default Header;
+export default NavBar;
