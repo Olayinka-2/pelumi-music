@@ -19,6 +19,11 @@ header {
   background: var(--body-bg);
 }
 
+img {
+  object-fit: cover;
+  object-position: center;
+}
+
 .img-height {
   height: 100%;
 }
@@ -30,7 +35,13 @@ header {
 
 .custom-navbar.scrolled {
   background-color: var(--primary-bg);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 12px rgba(224, 216, 216, 0.1);
+}
+
+/* About Section */
+
+section {
+  padding: 60px 0;
 }
 
 

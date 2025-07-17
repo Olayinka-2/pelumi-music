@@ -21,7 +21,7 @@ const Header:React.FC = () => {
 
   return (
     <>
-      <nav className="navbar navbar-expand-sm sticky-top custom-navbar" ref={navRef}>
+      <nav className="navbar navbar-expand-sm fixed-top custom-navbar" ref={navRef}>
       <div className="container-md">
         <a className="navbar-brand text-white fw-bold fs-4 ls-wide" href="#">Adeleke Pelumi</a>
         <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
