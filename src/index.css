@@ -44,6 +44,13 @@ section {
   padding: 60px 0;
 }
 
+.about-btn:hover {
+  border: 1px solid var(--text-dark);
+  color: var(--text-dark);
+  background: transparent;
+  font-weight:  bold;
+}
+
 
 /* body {
   background-color: var(--bg);
