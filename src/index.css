@@ -1,7 +1,7 @@
 
 :root {
   --primary-bg: #0B3C5D;
-  --body-bg: linear-gradient(to right,#092f48,#0B2134 );
+  --body-bg: linear-gradient(to right,#23506d,#082f4f );
   --accent-bg: #DDF3FE;
   --text-dark: #0B2134;
   --white: #FFFFFF;
@@ -15,12 +15,22 @@
   background-color: var(--accent-bg);
 }
 
-main {
+header {
   background: var(--body-bg);
 }
 
 .img-height {
   height: 100%;
+}
+
+.custom-navbar {
+  background-color: transparent;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.custom-navbar.scrolled {
+  background-color: var(--primary-bg);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
 

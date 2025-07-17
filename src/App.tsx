@@ -5,9 +5,19 @@ function App() {
 
   return (
     <>
-    <Header />
-    <main className="bg-body-bg px-4">
+    <header>
+      <Header />
       <HeroSection />
+    </header>
+    <main className="px-4">
+      <section id="About-me">
+        <div>
+          <div className="about-header">
+            <h3>About Me</h3>
+            <button className="btn btn-text-dark btn-lg">Read More</button>
+          </div>
+        </div>
+      </section>
     </main>
     </>
   )

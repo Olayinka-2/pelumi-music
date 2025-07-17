@@ -34,3 +34,5 @@ $theme-colors: map-merge($custom-theme-colors, $theme-colors);
 .ls-2 { letter-spacing: 2px; }
 .ls-tight { letter-spacing: -0.5px; }
 .ls-wide { letter-spacing: 2px; }
+
+.lh {line-height: 1.5rem; }
