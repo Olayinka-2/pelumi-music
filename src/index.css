@@ -20,7 +20,7 @@ header {
 }
 
 img {
-  object-fit: cover;
+  object-fit: contain;
   object-position: center;
 }
 
@@ -67,6 +67,19 @@ section {
   background: transparent;
 }
 
+footer {
+  background: var(--body-bg);
+}
+
+footer a {
+  margin: 0px 20px;
+  cursor: pointer;
+  transition: transform ease .2s;
+}
+
+footer a:hover {
+  transform: scale(1.2);
+}
 
 
 /* body {

@@ -3,6 +3,7 @@ import HeroSection from "./components/HeroSection";
 import AboutMe from "./components/AboutMe";
 import Music from "./components/Music";
 import Video from "./components/Video";
+import FooterSection from "./components/Footer";
 
 
 function App() {
@@ -18,6 +19,9 @@ function App() {
       <Music />
       <Video />
     </main>
+    <footer>
+      <FooterSection />
+    </footer>
     </>
   )
 }
