@@ -1,4 +1,4 @@
-import myImage from "../asset/profile.jpg";
+import myImage from "../asset/musicImages/profile.jpg"
 
 const AboutMe:React.FC = () => {
   return (

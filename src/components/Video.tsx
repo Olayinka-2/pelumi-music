@@ -1,4 +1,4 @@
-
+import { videoData } from "../data/Data";
 
 const Video:React.FC = () => {
   return (
@@ -17,26 +17,19 @@ const Video:React.FC = () => {
           >
             <div className="carousel-inner">
 
-              <div className="carousel-item active">
-                <div className="ratio ratio-16x9">
-                  <iframe
-                    src="https://www.youtube.com/embed/Z4ZL8aU-bAM"
-                    title="YouTube video"
-                    allowFullScreen
-                  ></iframe>
-                </div>
-              </div>
-
-              <div className="carousel-item">
-                <div className="ratio ratio-16x9">
-                  <iframe
-                    src="https://www.youtube.com/embed/Z4ZL8aU-bAM"
-                    title="YouTube video"
-                    allowFullScreen
-                  ></iframe>
-                </div>
-              </div>
-
+              {
+                videoData.map((videoItem) => (
+                  <div className="carousel-item active" key={videoItem.id}>
+                    <div className="ratio ratio-16x9">
+                      <iframe
+                        src={videoItem.src}
+                        title={videoItem.title}
+                        allowFullScreen
+                      ></iframe>
+                    </div>
+                  </div>
+                ))
+              }
 
             </div>
 
