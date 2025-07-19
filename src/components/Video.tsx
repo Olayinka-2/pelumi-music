@@ -1,5 +1,6 @@
 import { videoData } from "../data/Data";
 
+
 const Video:React.FC = () => {
   return (
     <>
@@ -18,11 +19,11 @@ const Video:React.FC = () => {
             <div className="carousel-inner">
 
               {
-                videoData.map((videoItem) => (
-                  <div className="carousel-item active" key={videoItem.id}>
+                videoData.map((videoItem, index) => (
+                  <div className={`carousel-item ${index === 0 ? "active" : ""}`} key={videoItem.id}>
                     <div className="ratio ratio-16x9">
                       <iframe
-                        src={videoItem.src}
+                        src={videoItem.videoUrl}
                         title={videoItem.title}
                         allowFullScreen
                       ></iframe>

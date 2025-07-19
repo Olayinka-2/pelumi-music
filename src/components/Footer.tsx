@@ -14,16 +14,16 @@ const FooterSection:React.FC = () => {
             <div className="row justify-content-center">
               <div className="d-flex justify-content-center my-5">
                 <a>
-                  <img src={facebook} alt="" />
+                  <img src={facebook} alt="facebook logo" />
                 </a>
                 <a>
-                  <img src={linkedIn} alt="" />
+                  <img src={linkedIn} alt="linkedin logo" />
                 </a>
                 <a>
-                  <img src={youtube} alt="" />
+                  <img src={youtube} alt="youtube logo" />
                 </a>
                 <a>
-                  <img src={twitter} alt="" />
+                  <img src={twitter} alt="twitter logo" />
                 </a>
               </div>
               <div className="col col-md-6">
@@ -34,7 +34,7 @@ const FooterSection:React.FC = () => {
                     <label htmlFor="floatingInput">Email address</label>
                   </div>
                   <div className="col-auto">
-                    <button type="submit" className="btn btn-accent-bg mb-3 fw-semibold">Subscribt</button>
+                    <button type="submit" className="btn btn-white mb-3 fw-semibold">Subscribe</button>
                   </div>
                 </form>
               </div>

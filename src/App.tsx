@@ -1,29 +1,37 @@
-import NavBar from "./components/NavBar";
-import HeroSection from "./components/HeroSection";
-import AboutMe from "./components/AboutMe";
-import Music from "./components/Music";
-import Video from "./components/Video";
-import FooterSection from "./components/Footer";
+import { createBrowserRouter } from "react-router-dom";
+import HomePage from "./pages/LandingPage";
+import MusicPage from "./pages/MusicPage";
+import VideoPage from "./pages/VideoPage";
 
 
-function App() {
 
-  return (
-    <>
-    <header className="py-5">
-      <NavBar />
-      <HeroSection />
-    </header>
-    <main>
-      <AboutMe />
-      <Music />
-      <Video />
-    </main>
-    <footer>
-      <FooterSection />
-    </footer>
-    </>
-  )
-}
+import NavBar from "./components/Layout";
+import AboutPage from "./pages/AboutPage";
 
-export default App;
+
+const router = createBrowserRouter([
+  {
+    path: "/",
+    element: <NavBar />, // Wrap all pages with Navbar
+    children: [
+      {
+        index: true,
+        element: <HomePage />, // or WelcomeLanding
+      },
+      {
+        path: "music",
+        element: <MusicPage />,
+      },
+      {
+        path: "video",
+        element: <VideoPage />,
+      },
+      {
+        path: "about",
+        element: <AboutPage />,
+      },
+    ],
+  },
+]);
+
+export default router;

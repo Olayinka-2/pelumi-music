@@ -33,23 +33,15 @@ export const musicData: CardItem[] = [
 
 export const videoData = [
   {
-    "id": 1,
-    "src":"https://www.youtube.com/embed/Z4ZL8aU-bAM",
-    "title":"YouTube video"
+    id: 1,
+    title: "My Video",
+    thumbnail: "thumbnail1.jpg", // in src/assets/images/
+    videoUrl: "https://www.youtube.com/embed/VIDEO_ID"
   },
   {
-    "id": 2,
-    "src":"https://www.youtube.com/embed/Z4ZL8aU-bAM",
-    "title":"YouTube video"
+    id: 2,
+    title: "Another Video",
+    thumbnail: "thumbnail2.jpg",
+    videoUrl: "https://www.youtube.com/embed/ANOTHER_VIDEO_ID"
   },
-  {
-    "id": 3,
-    "src":"https://www.youtube.com/embed/Z4ZL8aU-bAM",
-    "title":"YouTube video"
-  },
-  {
-    "id": 4,
-    "src":"https://www.youtube.com/embed/Z4ZL8aU-bAM",
-    "title":"YouTube video"
-  }
-]
+];

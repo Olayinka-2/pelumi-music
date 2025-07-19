@@ -1,14 +1,19 @@
 import myImage from "../asset/musicImages/profile.jpg"
+import {NavLink} from "react-router-dom";
 
 const AboutMe:React.FC = () => {
   return (
     <>
-      <section id="About-me" className="bg-accent-bg">
+      <section id="about" className="bg-accent-bg">
         <div className="row justify-content-center g-5">
           <div className="col-lg-6">
             <div className="d-flex justify-content-between align-item-center mb-3">
               <h3>About Me</h3>
-              <button className="btn btn-text-dark about-btn fw-semibold">Read More</button>
+              <NavLink to="/about">
+                <button className="btn btn-text-dark about-btn fw-semibold">
+                  Read More
+                </button>
+              </NavLink>
             </div>
             <div className="ls-1 me-3 fw-semibold">
             A young Josiah Queen, only 9 years old, attended a young adults conference with tens of thousands of believers in Kansas City, accompanied by his parents. Amidst the buzz of the event, he encountered God for the first time, and his life was completely changed. After this event, Josiah recalls having the desire to write and record his own songs.

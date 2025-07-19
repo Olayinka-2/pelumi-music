@@ -17,6 +17,11 @@
 
 header {
   background: var(--body-bg);
+  padding-top: 60px;
+}
+
+.main-container {
+  padding-top: 60px;
 }
 
 img {
@@ -41,7 +46,7 @@ img {
 /* About Section */
 
 section {
-  padding: 60px;
+  padding: 100px;
 }
 
 .about-btn:hover {
@@ -81,8 +86,37 @@ footer a:hover {
   transform: scale(1.2);
 }
 
+@media screen and (min-width: 768px) {
+  ul .nav-link {
+    position: relative;
+    color: white;
+    text-decoration: none;
+    padding-bottom: 0 0 5px 0;
+    margin: 0px 5px;
+  }
 
-/* body {
+  ul .nav-link::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 2px;
+    width: 0;
+    background-color: white;
+    transition: width 0.3s ease-in-out;
+  }
+
+  ul .nav-link:hover::after,
+  ul .nav-link.active::after {
+    color: white;
+    width: 100%;
+  }
+}
+
+
+
+
+/* body
   background-color: var(--bg);
   color: var(--text);
 }

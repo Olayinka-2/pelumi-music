@@ -15,7 +15,7 @@ const Music:React.FC = () => {
           <div className="row g-2">
 
             {
-              musicData.map((cardItem) => (
+              musicData.slice(0, 4).map((cardItem) => (
                 <div className=" col-md-6 col-xl-3" key={cardItem.id}>
                   <Card cardItems = {cardItem}/>
                 </div>
