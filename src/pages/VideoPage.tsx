@@ -30,7 +30,7 @@ const VideoPage:React.FC = () => {
     <>
     <section>
     <p className="displlay-1 fw-bold text-text-dark">Videos</p>
-    <div className="d-flex flex-wrap justify-content-center gap-3">
+    <div className="d-flex flex-wrap justify-content-center gap-4">
     {
       videoData.map((video) => (
         <div key={video.id} className="shadow bg-body rounded">

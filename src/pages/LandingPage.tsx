@@ -10,9 +10,9 @@ const HomePage:React.FC = () => {
       <HeroSection />
     </header>
     <main>
-      <AboutMe />
-      <Music />
-      <Video />
+        <AboutMe />
+        <Music />
+        <Video />
     </main>
     </>
   )

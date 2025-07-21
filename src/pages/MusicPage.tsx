@@ -5,11 +5,11 @@ const MusicPage: React.FC = () => {
   return (
     <div className="main-container">
       <div className="bg-accent-bg py-5">
-        <div className="container-md">
+        <div className="container">
           <h2 className="text-center text-white mb-4">My Music</h2>
           <div className="d-flex flex-wrap justify-content-center gap-4">
             {musicData.map((cardItem) => (
-              <div key={cardItem.id} style={{ width: "18rem" }} className="shadow bg-body rounded">
+              <div key={cardItem.id} className="shadow bg-body rounded">
                 <Card cardItems={cardItem} />
               </div>
             ))}

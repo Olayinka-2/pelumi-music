@@ -20,14 +20,17 @@ header {
   padding-top: 60px;
 }
 
-.main-container {
-  padding-top: 60px;
+main {
+  background: var(--accent-bg);
 }
+
 
 img {
   object-fit: contain;
   object-position: center;
 }
+
+
 
 .img-height {
   height: 100%;
@@ -46,7 +49,7 @@ img {
 /* About Section */
 
 section {
-  padding: 100px;
+  padding: 3rem 2rem;
 }
 
 .about-btn:hover {
@@ -87,6 +90,13 @@ footer a:hover {
 }
 
 @media screen and (min-width: 768px) {
+  .small-img {
+    width: 21rem;
+  }
+}
+
+@media screen and (min-width: 768px) {
+
   ul .nav-link {
     position: relative;
     color: white;

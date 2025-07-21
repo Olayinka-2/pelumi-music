@@ -5,7 +5,7 @@ import imageMap from "./Utils/ImageMap";
 const Card:React.FC<{cardItems: CardItem}> = ({cardItems}) => {
   return (
     <>
-      <div className="card">
+      <div className="card small-img">
                     <img src={imageMap[cardItems.image]} className="card-img-top" alt="..." />
                     <div className="card-body">
                       <h5 className="card-title">{cardItems.title}</h5>
