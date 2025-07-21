@@ -10,7 +10,7 @@ const NavBar:React.FC = () => {
   return (
     <>
         <ScrollToTop />
-      <nav className="navbar navbar-expand-md fixed-top custom-navbar bg-text-dark py-3">
+      <nav className="navbar navbar-expand-md sticky-top custom-navbar bg-text-dark py-3">
         <div className="container-md">
         <NavLink to="/" className="text-white nav-link fw-bold fs-4">
           Pelumi Adeleke

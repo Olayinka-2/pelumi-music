@@ -3,7 +3,7 @@ import myImage from "../asset/musicImages/profile.jpg"
 const HeroSection:React.FC = () => {
   return (
     <>
-      <div className="container-md p-5 pb-0">
+      <div className="container-md pX-5 pb-0">
       <div className="row justify-content-center align-item-center">
         <div className="col-md-6 text-center d-none d-md-block">
           <img  src={myImage} alt="profile image" className="img-fluid img-height" />

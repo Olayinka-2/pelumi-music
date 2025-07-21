@@ -29,7 +29,7 @@ const VideoPage:React.FC = () => {
   return (
     <>
     <section>
-    <p className="displlay-1 fw-bold text-text-dark">Videos</p>
+    <p className="display-5 fw-bold text-center text-text-dark">Videos</p>
     <div className="d-flex flex-wrap justify-content-center gap-4">
     {
       videoData.map((video) => (
