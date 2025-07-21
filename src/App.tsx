@@ -12,11 +12,11 @@ import AboutPage from "./pages/AboutPage";
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <NavBar />, // Wrap all pages with Navbar
+    element: <NavBar />,
     children: [
       {
         index: true,
-        element: <HomePage />, // or WelcomeLanding
+        element: <HomePage />, 
       },
       {
         path: "music",

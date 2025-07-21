@@ -45,7 +45,7 @@ const NavBar:React.FC = () => {
               </li>
 
               <li className="nav-item">
-                <HashLink smooth to="/#contact" className="text-white nav-link">Contact Me</HashLink>
+                <HashLink smooth to="#contact" className="text-white nav-link">Contact Me</HashLink>
               </li>
             </ul>
           </div>
