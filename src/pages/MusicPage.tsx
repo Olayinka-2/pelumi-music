@@ -1,26 +1,23 @@
 import { musicData } from "../data/Data";
 import Card from "../components/Card";
 
-const MusicPage:React.FC = () => {
+const MusicPage: React.FC = () => {
   return (
-    <>
-      <div className="main-container">
-        <div className="bg-accent-bg p-5">
-          <div className="container-md">
-            <div className="row">
-              {
-                          musicData.map((cardItem) => (
-                            <div className=" col-md-6 col-xl-3" key={cardItem.id}>
-                              <Card cardItems = {cardItem}/>
-                            </div>
-                ))
-                          }
-            </div>
-        </div>
+    <div className="main-container">
+      <div className="bg-accent-bg py-5">
+        <div className="container-md">
+          <h2 className="text-center text-white mb-4">My Music</h2>
+          <div className="d-flex flex-wrap justify-content-center gap-4">
+            {musicData.map((cardItem) => (
+              <div key={cardItem.id} style={{ width: "18rem" }} className="shadow bg-body rounded">
+                <Card cardItems={cardItem} />
+              </div>
+            ))}
+          </div>
         </div>
       </div>
-    </>
-  )
-}
+    </div>
+  );
+};
 
 export default MusicPage;

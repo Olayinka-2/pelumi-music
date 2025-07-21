@@ -7,6 +7,8 @@ export interface CardItem {
 }
 
 export interface videoItem {
-  src: string,
-  title: string,
+    id: number;
+    title: string;
+    thumbnail: string;
+    videoUrl:string;
 }
