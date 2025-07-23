@@ -11,4 +11,5 @@ export interface videoItem {
     title: string;
     thumbnail: string;
     videoUrl:string;
+    link?: string
 }

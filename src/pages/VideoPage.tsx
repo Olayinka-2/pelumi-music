@@ -1,8 +1,11 @@
-import profile from "../asset/profile.jpg";
+
 import play from "../asset/icons/play.svg";
 import {videoData} from "../data/Data";
 import {videoItem} from "../components/Utils/type"
 import { useState, useRef } from "react";
+
+import {videoImageMap} from "../components/Utils/ImageMap";
+
 
 declare global {
   interface Window {
@@ -28,18 +31,21 @@ const VideoPage:React.FC = () => {
 
   return (
     <>
-    <section>
+    <section className="position-relative overflow-hidden">
+     <div className="position-absolute top-0 start-0 w-100 h-100 video-img-bg"></div>
     <p className="display-5 fw-bold text-center text-text-dark">Videos</p>
-    <div className="d-flex flex-wrap justify-content-center gap-4">
+    <div className="container-md d-flexs">
     {
       videoData.map((video) => (
-        <div key={video.id} className="shadow bg-body rounded">
-          <div className="card position-relative" style={{"width": "18rem"} }>
-          <img src={play} alt="play icon" className="position-absolute top-50 start-50 translate-middle play-icon" onClick={() => handleClick(video)}/>
-            <img src={profile} className="card-img-top" alt="..."/>
+        <div key={video.id} className="shadow bg-body rounded overflow-hidden">
+          <div className="card">
+            <div className="vImg-container position-relative">
+              <img src={play} alt="play icon" className="position-absolute top-50 start-50 translate-middle play-icon" onClick={() => handleClick(video)}/>
+              <img src={videoImageMap[video.thumbnail]} className="img-fluid" alt="..."/>
+            </div>
             <div className="card-body">
               <h5 className="card-title">{video.title}</h5>
-              <a href="#" className="btn btn-primary">Go somewhere</a>
+              <a href="#" className="btn btn-text-dark">Go somewhere</a>
             </div>
           </div>
       </div>

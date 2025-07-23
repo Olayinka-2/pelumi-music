@@ -35,37 +35,38 @@ export const videoData = [
   {
     id: 1,
     title: "My Video",
-    thumbnail: "thumbnail1.jpg", // in src/assets/images/
-    videoUrl: "https://www.youtube.com/embed/VIDEO_ID"
+    thumbnail: "video2.jpg", // in src/assets/images/
+    videoUrl: "https://www.youtube.com/embed/VIDEO_ID",
+    stream: ''
   },
   {
     id: 2,
     title: "Another Video",
-    thumbnail: "thumbnail2.jpg",
+    thumbnail: "video2.jpg",
     videoUrl: "https://www.youtube.com/embed/ANOTHER_VIDEO_ID"
   },
   {
     id: 3,
     title: "My Video",
-    thumbnail: "thumbnail1.jpg", // in src/assets/images/
+    thumbnail: "video2.jpg", // in src/assets/images/
     videoUrl: "https://www.youtube.com/embed/VIDEO_ID"
   },
   {
     id: 4,
     title: "Another Video",
-    thumbnail: "thumbnail2.jpg",
+    thumbnail: "video2.jpg",
     videoUrl: "https://www.youtube.com/embed/ANOTHER_VIDEO_ID"
   },
   {
     id: 5,
     title: "My Video",
-    thumbnail: "thumbnail1.jpg", // in src/assets/images/
+    thumbnail: "video2.jpg", // in src/assets/images/
     videoUrl: "https://www.youtube.com/embed/VIDEO_ID"
   },
   {
     id: 6,
     title: "Another Video",
-    thumbnail: "thumbnail2.jpg",
+    thumbnail: "video2.jpg",
     videoUrl: "https://www.youtube.com/embed/ANOTHER_VIDEO_ID"
   },
 ];

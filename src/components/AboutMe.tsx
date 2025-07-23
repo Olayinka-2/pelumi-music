@@ -17,21 +17,8 @@ const AboutMe: React.FC = () => {
               </NavLink>
             </div>
             <p className="text-text-dark lh-lg fw-semibold">
-              A young Josiah Queen, only 9 years old, attended a young adults conference
-              with tens of thousands of believers in Kansas City, accompanied by his
-              parents. Amidst the buzz of the event, he encountered God for the first
-              time, and his life was completely changed. After this event, Josiah recalls
-              having the desire to write and record his own songs.
-              <br /><br />
-              On weekends, Josiah would travel with his mother, who was a traveling
-              preacher. He would lead worship alongside these communities of believers and
-              witnessed the powerful impact a song could have. At 18, while working at a
-              car wash, he fervently prayed for a path that would enable him to turn his
-              musical dreams into reality. Josiah felt an undeniable calling to share the
-              songs that he wrote in his bedroom with the world. Social platforms like
-              TikTok, Facebook, and Instagram became his stage, and his music resonated
-              deeply. With each upload, a community blossomed, drawn to the authenticity
-              of his verses and the sincerity of his devotion.
+              <span className="fw-bold">Pelumi Adeleke </span>
+              is a passionate gospel minister and visionary creative. He is the founder of Worshipper’s Tribe, Prayer Breeze, and Legendary Soundscape — platforms that equip and stir believers through sound, spirit, and atmosphere. As a singer, songwriter, and producer, Pelumi crafts music that carries God’s presence, speaks truth, and draws hearts closer to the Father. His sound isn’t just heard — it’s deeply felt.
             </p>
           </div>
 

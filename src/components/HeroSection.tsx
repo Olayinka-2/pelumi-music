@@ -1,4 +1,4 @@
-import myImage from "../asset/musicImages/profile.jpg"
+import myImage from "../asset/hero-image.jpg";
 
 const HeroSection:React.FC = () => {
   return (

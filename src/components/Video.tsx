@@ -1,4 +1,5 @@
 import { videoData } from "../data/Data";
+import { NavLink } from "react-router-dom";
 
 
 const Video:React.FC = () => {
@@ -7,8 +8,10 @@ const Video:React.FC = () => {
       <section id="video-section" className="bg-text-dark">
         <div className="container-md">
           <div  className="d-flex flex-row justify-content-between align-item-center">
-            <h2 className="text-muted-cream mb-4">MY VIDEO</h2>
-            <button className="btn btn-muted-cream align-self-start fw-semibold">SEE MORE</button>
+            <h2 className="text-muted-cream mb-4">VIDEO</h2>
+            <NavLink to="/video">
+              <button className="btn btn-muted-cream align-self-start fw-semibold">SEE MORE</button>
+            </NavLink>
           </div>
           <div
             id="videoCarousel"

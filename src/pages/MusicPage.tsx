@@ -3,20 +3,20 @@ import Card from "../components/Card";
 
 const MusicPage: React.FC = () => {
   return (
-    <div className="main-container">
-      <div className="bg-accent-bg py-4">
-        <div className="container">
-          <h2 className="text-center text-text-dark mb-4 display-5 fw-semibold">My Music</h2>
-          <div className="d-flex flex-wrap justify-content-center gap-4">
-            {musicData.map((cardItem) => (
-              <div key={cardItem.id} className="shadow bg-body rounded">
-                <Card cardItems={cardItem} />
-              </div>
-            ))}
-          </div>
-        </div>
-      </div>
-    </div>
+    <section className="position-relative overflow-hidden">
+    <div className="position-absolute top-0 start-0 w-100 h-100 video-img-bg"></div>
+   <p className="display-5 fw-bold text-center text-text-dark">Music</p>
+   <div className="container-md d-flexs">
+   {
+     musicData.map((cardItem) => (
+       <div key={cardItem.id} className="shadow bg-body rounded overflow-hidden">
+          <Card cardItems={cardItem} />
+     </div>
+     ))
+   }
+   </div>
+   </section>
+
   );
 };
 

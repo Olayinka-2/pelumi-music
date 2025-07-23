@@ -1,13 +1,20 @@
 import { musicData } from "../data/Data";
 import Card from "../components/Card";
 
+import { NavLink } from "react-router-dom";
+
 const Music: React.FC = () => {
   return (
       <section className="bg-white">
         <div className="container px-3">
-          <h2 className="text-center text-text-dark mb-4">My Music</h2>
+        <div  className="d-flex flex-row justify-content-between align-item-center">
+            <h2 className="text-text-dark mb-4">MUSIC</h2>
+            <NavLink to="/music">
+             <button className="btn btn-text-dark align-self-start fw-semibold">SEE MORE</button>
+            </NavLink>
+          </div>
           <div className="d-flex flex-wrap justify-content-center">
-            <div className="d-flex flex-wrap justify-content-center gap-3">
+            <div className="container-md d-flexs">
               {musicData.map((cardItem) => (
                 <div key={cardItem.id}>
                   <Card cardItems={cardItem} />
