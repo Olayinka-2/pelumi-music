@@ -1,0 +1,23 @@
+:root {
+  --bg: #FAFAF7;
+  --surface: #FFFFFF;
+  --text: #1A1A1A;
+  --text-muted: #5F5F5F;
+  --border: #E5E5E5;
+  --brand: #C99A3D;
+  --accent: #FF8C32;
+  --link: #5DA9E9;
+  --player: #FFFFFF;
+}
+
+[data-theme="dark"] {
+  --bg: #0B0B0D;
+  --surface: #121216;
+  --text: #F5F5F5;
+  --text-muted: #B3B3B3;
+  --border: rgba(255,255,255,0.08);
+  --brand: #F5C77A;
+  --accent: #FF8C32;
+  --link: #5DA9E9;
+  --player: #121216;
+}

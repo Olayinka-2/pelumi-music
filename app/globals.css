@@ -1,0 +1,42 @@
+@import "tailwindcss";
+
+:root {
+  /* Core surfaces */
+  --background: #ffffff;
+  --foreground: #0f172a; /* deep slate for readability */
+
+  /* UI surfaces */
+  --card: #f1f1f5;
+  --muted: #64748b;
+
+  /* Brand colors */
+  --primary: #e9b50a; /* softer gold for white background */
+  --accents: #040424;  /* deep blue (from your gradient) */
+}
+
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-muted: var(--muted);
+  --color-primary: var(--primary);
+  --color-accents: var(--accents);
+}
+
+html, body {
+  background: var(--background);
+  color: var(--foreground);
+}
+
+body {
+  background: var( --color-background);
+  color: var(--color-foreground);
+  font-family: "Poppins", sans-serif;
+}
+
+/* header,h1 , h2, h3 {
+  font-family:"Oranienbaum", serif ;
+} */
+
+
