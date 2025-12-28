@@ -18,7 +18,7 @@ const Header = () => {
   const pathName = usePathname();
 
   return (
-    <header className="border border-white/5 z-50 sticky top-0 left-0 bg-white">
+    <header className="border border-white/5 z-50 sticky top-0 left-0 bg-white border-b border-b-foreground/20">
       {/* Top Nav */}
       <nav className="max-w-7xl mx-auto px-6 py-3 flex justify-between items-center">
         <Link href={"/"}>
@@ -102,7 +102,7 @@ const Header = () => {
           );
         })}
 
-        <button className="mt-4 bg-primary text-card px-4 py-2 rounded-lg text-sm font-medium cursor-pointr hover:bg-primary/80">
+        <button className="mt-4 bg-primary text-card px-4 py-2 rounded-lg text-sm font-medium cursor-pointer hover:bg-primary/80">
           Subscribe
         </button>
       </aside>
