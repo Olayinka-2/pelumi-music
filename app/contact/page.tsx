@@ -9,8 +9,8 @@ const ContactPage = () => {
 
         <h1 className='uppercase font-bold text-2xl'>Contact</h1>
         <p>Reach out on all social media platforms <br /> (click on the link below) </p>
-        <Link href={"https://li.sten.to/pelumiadeleke"}>https://li.sten.to/pelumiadeleke</Link>
-        <Link href={"https://pelumiadeleke0142@gmail.com"}>pelumiadeleke0142@gmail.com</Link>
+        <Link href={"https://li.sten.to/pelumiadeleke"} target='_black' >https://li.sten.to/pelumiadeleke</Link>
+        <Link href={"https://pelumiadeleke0142@gmail.com"} target='_black'>pelumiadeleke0142@gmail.com</Link>
         <p>+2349035809433</p>
         </div>
       </div>

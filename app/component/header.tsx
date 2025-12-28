@@ -2,25 +2,50 @@
 
 import React, { useState } from "react";
 import Image from "next/image";
-import logo from "../../assets/logo.png"
+import logo from "../../assets/logo.png";
 import Link from "next/link";
 import { AiOutlineMenu, AiOutlineClose } from "react-icons/ai";
+import { usePathname } from "next/navigation";
 
 const Header = () => {
   const [navCollapsed, setNavCollapsed] = useState(true);
+  const links = [
+    { href: "/", name: "Home" },
+    { href: "/music", name: "Music" },
+    { href: "/about", name: "About me" },
+    { href: "/contact", name: "Contact" },
+  ];
+  const pathName = usePathname();
 
   return (
     <header className="border border-white/5 z-50 sticky top-0 left-0 bg-white">
-      
       {/* Top Nav */}
       <nav className="max-w-7xl mx-auto px-6 py-3 flex justify-between items-center">
-        <Image  src={'/image/logo.png'} alt="logo" width={100} height={100} className="w-16"/>
+        <Link href={"/"}>
+          <Image
+            src={"/image/logo.png"}
+            alt="logo"
+            width={100}
+            height={100}
+            className="w-16"
+          />
+        </Link>
 
         <div className="hidden md:flex items-center gap-5">
-          <Link href="/" className="text-sm font-medium text-muted">Home</Link>
-          <Link href="/music" className="text-sm font-medium text-muted">Music</Link>
-          <Link href="/about" className="text-sm font-medium text-muted">About me</Link>
-          <Link href="/contact" className="text-sm font-medium text-muted">Contact</Link>
+          {links.map((link) => {
+            const isActive = link.href === pathName;
+            return (
+              <Link
+                href={link.href}
+                className={`text-sm font-medium text-muted transition duration-300 hover:text-primary ${
+                  isActive && "text-primary"
+                }`}
+                key={link.name}
+              >
+                {link.name}
+              </Link>
+            );
+          })}
         </div>
 
         <div className="flex items-center gap-3">
@@ -64,17 +89,23 @@ const Header = () => {
           className="self-end cursor-pointer"
           onClick={() => setNavCollapsed(true)}
         />
+        {links.map((link) => {
+          return (
+            <Link
+              key={link.name}
+              href={link.href}
+              onClick={() => setNavCollapsed(true)}
+              className="text-muted hover:text-primary"
+            >
+              {link.name}
+            </Link>
+          );
+        })}
 
-        <Link href="/" onClick={() => setNavCollapsed(true)} className="text-muted">Home</Link>
-        <Link href="/music" onClick={() => setNavCollapsed(true)} className="text-muted">Music</Link>
-        <Link href="/about" onClick={() => setNavCollapsed(true)} className="text-muted">About me</Link>
-        <Link href="/contact" onClick={() => setNavCollapsed(true)} className="text-muted">Contact</Link>
-
-        <button className="mt-4 bg-primary text-card px-4 py-2 rounded-lg text-sm font-medium">
+        <button className="mt-4 bg-primary text-card px-4 py-2 rounded-lg text-sm font-medium cursor-pointer hover:bg-primary/80">
           Subscribe
         </button>
       </aside>
-
     </header>
   );
 };
