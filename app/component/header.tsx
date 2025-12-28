@@ -102,7 +102,7 @@ const Header = () => {
           );
         })}
 
-        <button className="mt-4 bg-primary text-card px-4 py-2 rounded-lg text-sm font-medium cursor-pointer hover:bg-primary/80">
+        <button className="mt-4 bg-primary text-card px-4 py-2 rounded-lg text-sm font-medium cursor-no-drop hover:bg-primary/80">
           Subscribe
         </button>
       </aside>
