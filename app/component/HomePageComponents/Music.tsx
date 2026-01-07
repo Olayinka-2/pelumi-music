@@ -1,13 +1,12 @@
-import React from "react";
+"use client";
+
 import Image from "next/image";
-import { getSongs } from "@/lib/queries/getSongs";
 import { useRouter } from "next/navigation";
 import { musicTypes } from "@/app/types/music";
 
-const Music = async () => {
+const Music = ({ songs }: { songs: musicTypes[] }) => {
   const router = useRouter();
 
-  const mapMusic: musicTypes[] = await getSongs()
   return (
     <section className="max-w-7xl mx-auto px-8 py-10 mt-8">
       <h2 className="text-2xl text-center font-semibold text-primary mb-8">
@@ -15,7 +14,7 @@ const Music = async () => {
       </h2>
 
       <div className="grid gap-5 sm:grid-cols-2 md:grid-cols-4">
-        {mapMusic.slice(0,4).map((song) => (
+        {songs.slice(0,4).map((song) => (
           <div className="bg-card p-3 rounded-2xl" key={song.id}>
             <Image
               alt="Pelumi Music image"

@@ -7,13 +7,20 @@ const MusicPage = async () => {
   return (
     <section className="max-w-6xl mx-auto px-6 pb-16 py-8">
       {/* Header */}
-      <div className="text-center  mb-8">
+      <div className="text-center mb-8">
         <h1 className="text-3xl font-bold text-accent">Track List</h1>
         <p className="text-muted mt-2">Check out my song list</p>
       </div>
 
-      {/* Music List */}
-      {<MusicGrid songs={songs} />}
+      {/* Music List or Error */}
+
+      {songs.length === 0 ? (
+        <div className="text-center text-muted mt-8">
+          <p>No songs available yet.</p>
+        </div>
+      ) : (
+        <MusicGrid songs={songs} />
+      )}
     </section>
   );
 };

@@ -1,13 +1,12 @@
-"use client";
-
-import { MdPlayCircleOutline } from 'react-icons/md'
 import HomePage from '@/app/component/HomePageComponents/HomePage';
+import { getSongs } from '@/lib/queries/getSongs';
 
 
-const Home = () => {
+const Home = async () => {
+  const songs = await getSongs()
   return (
     <div className='min-h-screen bg-background bg-amb'>
-      <HomePage />
+      <HomePage songs = {songs} />
     </div>
   )
 }

@@ -1,9 +1,8 @@
-"use client";
-
 import Link from "next/link";
 import Music from "./Music";
+import { musicTypes } from "@/app/types/music";
 
-export default function HomePage() {
+export default function HomePage({ songs }: { songs: musicTypes[] }) {
   return (
     <main className="min-h-screen bg-background">
       <section
@@ -71,7 +70,7 @@ export default function HomePage() {
       </section>
 
       {/* Content Section (White Background) */}
-      <Music />
+      <Music songs={songs}/>
       
     </main>
   );
