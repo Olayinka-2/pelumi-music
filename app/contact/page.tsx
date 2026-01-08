@@ -3,8 +3,8 @@ import React from "react";
 
 const ContactPage = () => {
   return (
-    <section className="min-h-screen bg-accents flex items-center justify-center px-6">
-      <div className="bg-background/90 backdrop-blur rounded-4xl w-full max-w-md p-10 shadow-xl border border-border">
+    <section className="min-h-max bg-accents flex items-center justify-center px-6 py-30 md:py-20">
+      <div className="bg-background/90 backdrop-blur rounded-4xl w-full max-w-md p-5 md:p-10 shadow-xl border border-border">
         <div className="text-center flex flex-col items-center gap-6 text-foreground">
           {/* Title */}
           <h1 className="uppercase font-bold text-2xl tracking-widest text-accents">
@@ -27,7 +27,7 @@ const ContactPage = () => {
                 border border-accents/60
                 px-4 py-3 font-medium text-accents
                 hover:bg-accents hover:text-background
-                transition
+                transition text-sm md:text-base
               "
             >
               🎧 Music & Social Links
@@ -37,7 +37,7 @@ const ContactPage = () => {
             <Link
               href="mailto:pelumiadeleke0142@gmail.com"
               className="
-                w-full text-center rounded-xl
+                w-full text-center rounded-xl text-sm md:text-base
                 border border-border
                 px-4 py-3 font-medium
                 hover:bg-foreground/5
@@ -51,7 +51,7 @@ const ContactPage = () => {
             <Link
               href="tel:+2349035809433"
               className="
-                w-full text-center rounded-xl
+                w-full text-center rounded-xl text-sm md:text-base
                 bg-accents text-background
                 px-4 py-3 font-semibold
                 hover:opacity-90

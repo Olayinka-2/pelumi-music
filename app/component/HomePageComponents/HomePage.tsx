@@ -28,7 +28,7 @@ export default function HomePage({
               <span className="p-2  rounded inline-block text-xs bg-red-500 text-white font-semibold uppercase tracking-wider">
                 New Release
               </span>
-              {latestSong && (
+              {latestSong ? (
                 <>
                   <h1 className="text-4xl md:text-5xl font-serif text-accents">
                     {latestSong.artist_name}
@@ -38,6 +38,17 @@ export default function HomePage({
                     "{latestSong.title}"
                   </p>
                 </>
+              ) : (
+                <>
+                    <h1 className="text-4xl md:text-5xl font-serif text-accents">
+      Pelumi Adeleke
+    </h1>
+
+    <p className="text-sm font-medium text-muted italic">
+      New release coming soon
+    </p>
+                </>
+
               )}
 
               <div className="flex gap-4 pt-4">

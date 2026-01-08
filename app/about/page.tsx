@@ -1,7 +1,5 @@
-import React from "react";
-import { FaArrowLeft } from "react-icons/fa";
 import Image from "next/image";
-import pelumi from "../../assets/logo.png";
+
 
 const AboutPage = () => {
   return (
@@ -9,9 +7,9 @@ const AboutPage = () => {
       <div className="bg-card rounded-t-4xl relative mt-30 flex-1 px-5">
         <div className="absolute  left-1/2 -translate-1/2">
           <Image
-            src="/image/pelumi.png"
+            src="/image/pelumi.jpg"
             alt=""
-            className="w-40 h-40 object-contain object-center"
+            className="w-40 h-40 object-contain object-center rounded-full"
             width={100}
             height={100}
           />
