@@ -1,8 +1,6 @@
 import { getSongs } from "@/lib/queries/getSongs";
 import MusicGrid from "../component/music/MusicGrid";
 
-export const dynamic = "force-dynamic";
-
 const MusicPage = async () => {
   const songs = await getSongs();
 
@@ -26,5 +24,7 @@ const MusicPage = async () => {
     </section>
   );
 };
+
+export const dynamic = "force-dynamic"; 
 
 export default MusicPage;

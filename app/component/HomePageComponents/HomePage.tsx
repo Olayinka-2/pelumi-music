@@ -2,7 +2,13 @@ import Link from "next/link";
 import Music from "./Music";
 import { musicTypes } from "@/app/types/music";
 
-export default function HomePage({ songs }: { songs: musicTypes[] }) {
+export default function HomePage({
+  songs,
+  latestSong,
+}: {
+  songs: musicTypes[];
+  latestSong: musicTypes | null;
+}) {
   return (
     <main className="min-h-screen bg-background">
       <section
@@ -18,19 +24,21 @@ export default function HomePage({ songs }: { songs: musicTypes[] }) {
       >
         <div className="max-w-7xl mx-auto px-6 py-24">
           <div className="grid sm:grid-cols-2 gap-12 items-center">
-  
             <div className="space-y-6">
               <span className="p-2  rounded inline-block text-xs bg-red-500 text-white font-semibold uppercase tracking-wider">
                 New Release
               </span>
+              {latestSong && (
+                <>
+                  <h1 className="text-4xl md:text-5xl font-serif text-accents">
+                    {latestSong.artist_name}
+                  </h1>
 
-              <h1 className="text-4xl md:text-5xl font-serif text-primary">
-                Child of YHWH
-              </h1>
-
-              <p className="text-lg font-semibold text-gray-700">
-                “Sounds of Glory”
-              </p>
+                  <p className="text-lg font-semibold text-gray-700">
+                    "{latestSong.title}"
+                  </p>
+                </>
+              )}
 
               <div className="flex gap-4 pt-4">
                 {/* <button className="bg-foreground text-white px-6 py-3 rounded-lg font-medium hover:opacity-90">
@@ -70,8 +78,7 @@ export default function HomePage({ songs }: { songs: musicTypes[] }) {
       </section>
 
       {/* Content Section (White Background) */}
-      <Music songs={songs}/>
-      
+      <Music songs={songs} />
     </main>
   );
 }
