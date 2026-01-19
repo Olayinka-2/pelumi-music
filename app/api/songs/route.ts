@@ -1,8 +1,8 @@
 // app/api/songs/route.ts
 import { NextResponse } from "next/server";
-import { getSongs } from "@/lib/queries/getSongs";
+import { getLatestSong } from "@/lib/queries/getLatestSong";
 
 export async function GET() {
-  const songs = await getSongs();
+  const songs = await getLatestSong();
   return NextResponse.json(songs);
 }
