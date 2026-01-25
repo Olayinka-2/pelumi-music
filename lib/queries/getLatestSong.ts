@@ -1,5 +1,5 @@
 import { supabaseServer } from "../superbase/supabaseServer";
-import { musicTypes } from "@/app/types/music";
+import { musicTypes } from "@/app/(Users)/types/music";
 
 export async function getLatestSong(): Promise<musicTypes | null> {
   const supabase = await supabaseServer();
