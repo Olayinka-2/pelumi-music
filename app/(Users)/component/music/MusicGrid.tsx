@@ -1,6 +1,6 @@
 "use client";
 
-import { musicTypes } from "@/app/types/music";
+import { musicTypes } from "../../types/music";
 import { useRouter } from "next/navigation";
 import Image from "next/image";
 
