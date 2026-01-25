@@ -1,9 +1,7 @@
-import type { Metadata } from "next";
+// app/layout.tsx
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-import "../styles/theme.css";
-import Header from "@/app/component/header";
-import Footer from "@/app/component/footer";
+import "../styles/theme.css"
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -15,21 +13,10 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
-export const metadata: Metadata = {
-  title: "Child of YHWH",
-  description: "Spirit-filled gospel music platform",
-};
-
-export default function RootLayout({
-  children,
-  
-}: Readonly<{
-  children: React.ReactNode;
-
-}>) {
+export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en" data-theme="light">
-      <head>
+    <html lang="en">
+       <head>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link
           rel="preconnect"
@@ -45,13 +32,7 @@ export default function RootLayout({
           rel="stylesheet"
         ></link>
       </head>
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
-        {<Header />}
-        {children}
-        {<Footer />}
-      </body>
+      <body  className={`${geistSans.variable} ${geistMono.variable} antialiased`}>{children}</body>
     </html>
-  );
+  )
 }

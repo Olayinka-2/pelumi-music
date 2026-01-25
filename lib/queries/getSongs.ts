@@ -2,10 +2,11 @@ import { supabaseServer } from "../superbase/supabaseServer";
 import { musicTypes } from "@/app/types/music";
 
 export async function getSongs(): Promise<musicTypes[]> {
-  const { data, error } = await supabaseServer
+  const supabase = await supabaseServer();
+  const { data, error } = await supabase
     .from("songs")
     .select("*")
-    .order("released_date", { ascending: false });
+    .order("released_date", { ascending: true });
 
     if(error) {
       console.error("superBase error", error);

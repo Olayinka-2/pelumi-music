@@ -1,6 +1,6 @@
 import Link from "next/link";
 import Music from "./Music";
-import { musicTypes } from "@/app/types/music";
+import { musicTypes } from "../../types/music";
 
 export default function HomePage({
   songs,

@@ -2,7 +2,8 @@ import { supabaseServer } from "../superbase/supabaseServer";
 import { musicTypes } from "@/app/types/music";
 
 export async function getLatestSong(): Promise<musicTypes | null> {
-  const { data, error } = await supabaseServer
+  const supabase = await supabaseServer();
+  const { data, error } = await supabase
     .from("songs")
     .select("*")
     .order("released_date", { ascending: false })

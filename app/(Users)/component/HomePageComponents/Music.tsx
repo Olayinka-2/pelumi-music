@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import { useRouter } from "next/navigation";
-import { musicTypes } from "@/app/types/music";
+import { musicTypes } from "../../types/music";
 
 const Music = ({ songs }: { songs: musicTypes[] }) => {
   const router = useRouter();

@@ -1,4 +1,4 @@
-import HomePage from '@/app/component/HomePageComponents/HomePage';
+import HomePage from './component/HomePageComponents/HomePage';
 import { getLatestSong } from '@/lib/queries/getLatestSong';
 import { getSongs } from '@/lib/queries/getSongs';
 
