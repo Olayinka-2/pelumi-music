@@ -1,4 +1,4 @@
-export default function RootLayout({
+export default function AdminLayout({
   children,
   
 }: Readonly<{
@@ -6,10 +6,8 @@ export default function RootLayout({
 
 }>) {
   return (
-    <html lang="en" data-theme="light">
-      <body>
+      <div>
         {children}
-      </body>
-    </html>
+      </div>
   );
 }

@@ -1,62 +1,26 @@
-"use client";
+'use client'
 
-import { useState } from "react";
-import { supabaseBrowser } from "@/lib/superbase/supabaseClient";
-import { useRouter } from "next/navigation";
+import { useActionState } from 'react'
+import { signIn } from '@/lib/actions/signIn'
 
-export default function AdminLoginPage() {
-  const supabase = supabaseBrowser();
-  const router = useRouter();
+type SignInState = {
+  error?: string
+}
 
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
-  const [error, setError] = useState<string | null>(null);
-  const [loading, setLoading] = useState(false);
+const initialState: SignInState = {}
 
-  const handleLogin = async (e: React.FormEvent) => {
-    e.preventDefault();
-    setLoading(true);
-    setError(null);
-
-    const { error } = await supabase.auth.signInWithPassword({
-      email,
-      password,
-    });
-
-    if (error) {
-      setError(error.message);
-    } else {
-      router.push("/admin");
-    }
-
-    setLoading(false);
-  };
+export default function LoginPage() {
+  const [state, action] = useActionState(signIn, initialState)
 
   return (
-    <form onSubmit={handleLogin}>
-      <h1>Admin Login</h1>
+    <form action={action}>
+      <input name="email" className='border-2 border-gray-500'/>
+      <input name="password" />
 
-      <input
-        type="email"
-        placeholder="Email"
-        value={email}
-        onChange={(e) => setEmail(e.target.value)}
-        required
-      />
+      {state.error && <p className="text-red-500">{state.error}</p>}
 
-      <input
-        type="password"
-        placeholder="Password"
-        value={password}
-        onChange={(e) => setPassword(e.target.value)}
-        required
-      />
-
-      <button disabled={loading}>
-        {loading ? "Signing in..." : "Sign In"}
-      </button>
-
-      {error && <p>{error}</p>}
+      <button>Login</button>
     </form>
-  );
+  )
 }
+

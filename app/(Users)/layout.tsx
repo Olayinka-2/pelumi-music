@@ -13,12 +13,10 @@ export default function UserLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" data-theme="light">
-      <body>
+      <div>
         {<Header />}
         {children}
         {<Footer />}
-      </body>
-    </html>
+      </div>
   );
 }
