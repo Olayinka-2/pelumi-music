@@ -6,7 +6,7 @@ export async function getSongs(): Promise<musicTypes[]> {
   const { data, error } = await supabase
     .from("songs")
     .select("*")
-    .order("released_date", { ascending: true });
+    .order("released_date", { ascending: false });
 
     if(error) {
       console.error("superBase error", error);
