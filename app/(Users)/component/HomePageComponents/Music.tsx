@@ -29,16 +29,19 @@ const Music = ({ songs }: { songs: musicTypes[] }) => {
 
       <div className="grid gap-5 sm:grid-cols-2 md:grid-cols-4">
         {songs.slice(0, 4).map((song) => (
-          <div className="bg-card p-3 rounded-2xl" key={song.id}>
+          <div className="bg-card p-3 rounded-2xl flex flex-col gap-3" key={song.id}>
+            <div className="h-2/3">
+
             <Image
               alt={`${song.title} cover`}
               src={song.cover_url}
               width={300}
               height={300}
-              className="w-full object-cover rounded-xl"
+              className="w-full  rounded-xl h-full object-fill"
             />
+            </div>
 
-            <div className="flex flex-col mt-3 gap-2">
+            <div className="flex flex-col mt-3 gap-0 h-1/3 justify-end">
               <h3 className="font-semibold">{song.title}</h3>
 
               <p className="text-muted text-sm">
